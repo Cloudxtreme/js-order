@@ -37,6 +37,9 @@ import pkg from './package.json';
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
+var deploy = require('gulp-subtree');
+var clean = require('gulp-clean');
+
 // Lint JavaScript
 gulp.task('lint', () =>
   gulp.src('app/scripts/**/*.js')
@@ -102,7 +105,7 @@ gulp.task('styles', () => {
 });
 
 // Concatenate and minify JavaScript. Optionally transpiles ES2015 code to ES5.
-// to enables ES2015 support remove the line `"only": "gulpfile.babel.js",` in the
+// to enable ES2015 support remove the line `"only": "gulpfile.babel.js",` in the
 // `.babelrc` file.
 gulp.task('scripts', () =>
     gulp.src([
@@ -252,8 +255,17 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
       `${rootDir}/*.{html,json}`
     ],
     // Translates a static file path to the relative URL that it's served from.
-    stripPrefix: path.join(rootDir, path.sep)
+    // This is '/' rather than path.sep because the paths returned from
+    // glob always use '/'.
+    stripPrefix: rootDir + '/'
   });
+});
+
+//Deployment to GitHub-Pages (gh-pages). Be sure to have 'dist' removed from the .gitignore!
+gulp.task('deploy', function () {
+  return gulp.src('dist')
+    .pipe(deploy())
+    .pipe(clean());
 });
 
 // Load custom tasks from the `tasks` directory
