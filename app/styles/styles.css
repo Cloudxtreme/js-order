@@ -38,6 +38,14 @@ body .demo-blog {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
+button.food {
+  margin: 8px;
+  min-width: 135px;
+  max-width: 220px;
+  float: left;
+  clear: both;
+}
+
 .demo-blog .demo-blog__posts {
   max-width: 900px;
   padding: 0;

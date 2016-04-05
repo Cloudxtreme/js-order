@@ -39,6 +39,7 @@ const reload = browserSync.reload;
 
 var deploy = require('gulp-subtree');
 var clean = require('gulp-clean');
+var browserify = require('gulp-browserify');
 
 // Lint JavaScript
 gulp.task('lint', () =>
@@ -259,6 +260,16 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
     // glob always use '/'.
     stripPrefix: rootDir + '/'
   });
+});
+
+gulp.task('scripts', function() {
+  // Single entry point to browserify 
+  gulp.src('src/js/app.js')
+    .pipe(browserify({
+      insertGlobals : true,
+      debug : !gulp.env.production
+    }))
+    .pipe(gulp.dest('./build/js'))
 });
 
 //Deployment to GitHub-Pages (gh-pages). Be sure to have 'dist' removed from the .gitignore!
