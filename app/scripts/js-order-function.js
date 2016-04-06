@@ -14,6 +14,13 @@
       addItem.addEventListener('click', createFoodItem );
     }
 
+
+    // SJORS
+    // CAN
+    // YOU
+    // READ?
+
+
     // Functions
     /** Create a new button with the value of the input field */
     function createFoodItem() 
