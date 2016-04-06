@@ -15,6 +15,7 @@
     }
 
 
+<<<<<<< HEAD
     // SJORS
     // CAN
     // YOU
@@ -24,6 +25,13 @@
     // CAN
     
     
+=======
+    // wow
+    // much
+    // awesome!
+
+
+>>>>>>> refs/remotes/frankgraave/develop
     // Functions
     /** Create a new button with the value of the input field */
     function createFoodItem() 
