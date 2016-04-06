@@ -15,13 +15,9 @@
     }
 
 
-    // SJORS
-    // CAN
-    // YOU
-    // READ?
-    // YES
-    // I
-    // CAN
+    // wow
+    // much
+    // awesome!
 
 
     // Functions
