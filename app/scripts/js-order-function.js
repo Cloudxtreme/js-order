@@ -22,8 +22,8 @@
     // YES
     // I
     // CAN
-
-
+    
+    
     // Functions
     /** Create a new button with the value of the input field */
     function createFoodItem() 
