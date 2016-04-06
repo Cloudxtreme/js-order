@@ -54,6 +54,3 @@
         obj.appendChild( this.delete );
     }
 })();
-
-
-//Frank graave is een shemale xcxfcxcdffdfdfdfdffdsfsd
