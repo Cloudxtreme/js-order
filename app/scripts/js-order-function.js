@@ -7,7 +7,7 @@
     // This one adresses the HTML container by class 'chosenFood'
     var newButtonContainer = document.getElementsByClassName('chosenFood')[0];
     // This variable is used in the 'if' statement below.
-    var addItem = document.getElementsByClassName('addUserChoice')[0];
+    var addItem = document.getElementsByClassName('addUserMovie')[0];
 
     // On this click-event we run the function 'createFoodItem'
     // I run the function 'createFoodItem' here, but maybe I should make a 'check' function
@@ -25,7 +25,7 @@
     /** Create a new button with the value of the input field */
     function createFoodItem() 
     {
-      var buttonText = document.getElementsByClassName('userChoice')[0].value;
+      var buttonText = document.getElementsByClassName('userMovie')[0].value;
       var button = new buttonObj( buttonText , 2.30 );
 
       var newButton = document.createElement('button');
@@ -45,15 +45,15 @@
       return function( e )
       {
         console.log( button.text );
-        console.log( button.price );
+        console.log( button.rating );
         //button.addDelete( this );
       }
     }
-    //Here the buttonObj is created with the given values: text and price
-    function buttonObj( text , price )
+    //Here the buttonObj is created with the given values: text and rating
+    function buttonObj( text , rating )
     {
       this.text = text;
-      this.price = price;
+      this.rating = rating;
         
 //      this.delete = document.createElement('i');
 //      this.delete.classList.add('material-icons', 'md-8');
