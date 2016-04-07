@@ -90,18 +90,26 @@
               <p>
                 Voor mijn “Individual Focus 1” zoals dat zo mooi heet, ga ik mij verdiepen in de programmeertaal JavaScript. Waarom JavaScript? Het is naar mijn mening dé basis om straks een goede webdeveloper te worden! Ik ben bezig met het lezen van het boek “Eloquent JavaScript” geschreven door Marijn Haverbeke. Dit boek is te bestellen, maar hier ook gratis online te lezen. Het boek is geschreven in het engels waardoor het enigszins wat moeilijker is om goed te begrijpen. Ondanks dat is het wel een erg goed boek tot nu toe. Ik ga mij verdiepen in de JavaScript syntax, functions en arrays, objects en prototypes, DOM manipulatie, Events, Closures, HTTP en JavaScript XMLhttpRequests.
               </p>
-              <h4>Pizzatime!</h4>
+              <h4>MOVIE TIME!</h4>
               <p>
-                Voor deze IF ga ik een soort bestel service ontwikkelen in JavaScript. Hiervoor gebruik ik o.a. Closures en EventListeners. Meer informatie volgt...
+               Dit is een prototype van onze movie-recensie-maker. Het is de bedoeling dat de gebruiker films kan toevoegen en die een recensie kan geven. Met hierbij een rating in sterren.
               </p>
               <p>
-                <!-- What pizza you want bro? -->
+                <!-- What movie you want to add bro? -->
                 <div class="mdl-textfield mdl-js-textfield">
-                  <input class="userChoice mdl-textfield__input" type="text" id="sample1">
-                  <label class="mdl-textfield__label" for="choiceField">Wat voor ingrediënten wil je op je Pizza?</label>
+                  <input class="userMovie mdl-textfield__input" type="text" id="sample1">
+                  <label class="mdl-textfield__label" for="choiceField">Welke film wil je toevoegen?</label>
+                    <span class="star-rating">
+                      <input type="radio" name="rating" value="1"><i></i>
+                      <input type="radio" name="rating" value="2"><i></i>
+                      <input type="radio" name="rating" value="3"><i></i>
+                      <input type="radio" name="rating" value="4"><i></i>
+                      <input type="radio" name="rating" value="5"><i></i>
+                    </span>
+<strong class="choice">Choose a rating</strong>
                 </div>
                 <!-- Accent-colored raised button with ripple -->
-                <button class="addUserChoice mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                <button class="addUserMovie mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                   Toevoegen
                 </button><br>
                 <p>Je keuze:</p>
