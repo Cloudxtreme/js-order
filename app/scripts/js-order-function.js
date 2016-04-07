@@ -2,10 +2,9 @@
   'use strict';
     //                 ============= VARIABLES =============
     
-    
-    
+
     // This one adresses the HTML container by class 'chosenFood'
-    var newButtonContainer = document.getElementsByClassName('chosenFood')[0];
+    var newButtonContainer = document.getElementsByClassName('chosenMovie')[0];
     // This variable is used in the 'if' statement below.
     var addItem = document.getElementsByClassName('addUserMovie')[0];
 
@@ -17,17 +16,26 @@
       addItem.addEventListener('click', createFoodItem );
     }
 
-
-
     //                  ============= FUNCTIONS =============
     
     
     /** Create a new button with the value of the input field */
     function createFoodItem() 
     {
-      var buttonText = document.getElementsByClassName('userMovie')[0].value;
-      var button = new buttonObj( buttonText , 2.30 );
+      var stars = document.getElementsByName('rating');
+      var len = stars.length
+      var i;
+      var starNumber = new Array();
 
+      for(i=0; i<len; i++) {
+        if (stars[i].checked) {
+          // console.log(stars[i].value);
+          starNumber.push(stars[i].value);
+        }
+      }
+
+      var buttonText = document.getElementsByClassName('userMovie')[0].value;
+      var button = new buttonObj( buttonText , starNumber );
       var newButton = document.createElement('button');
         
       newButton.classList.add('food', 'mdl-button', 'mdl-js-button', 'mdl-button--raised');
@@ -36,32 +44,32 @@
       newButton.addEventListener('click', createClosure( button ) );
     };
 
-    //When the button is clicked this functin will execute
+    // When the button is clicked this functin will execute
     function createClosure( button )
     {  
-      //var button = new ButtonObj
+      // var button = new ButtonObj
       var button = button;
       // if the created button is clicked this will be returned
       return function( e )
       {
         console.log( button.text );
         console.log( button.rating );
-        //button.addDelete( this );
+        // button.addDelete( this );
       }
     }
-    //Here the buttonObj is created with the given values: text and rating
+    // Here the buttonObj is created with the given values: text and rating
     function buttonObj( text , rating )
     {
       this.text = text;
       this.rating = rating;
         
-//      this.delete = document.createElement('i');
-//      this.delete.classList.add('material-icons', 'md-8');
-//      this.delete.innerHTML = "clear";
+     // this.delete = document.createElement('i');
+     // this.delete.classList.add('material-icons', 'mdl-badge', 'mdl-badge--overlap');
+     // this.delete.innerHTML = "3";
     }
 
-//    buttonObj.prototype.addDelete = function( obj )
-//    {
-//        obj.appendChild( this.delete );
-//    }
+   // buttonObj.prototype.addDelete = function( obj )
+   // {
+   //     obj.appendChild( this.delete );
+   // }
 })();
