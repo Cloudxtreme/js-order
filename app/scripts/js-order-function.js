@@ -1,6 +1,9 @@
 (function() {
   'use strict';
-    // Variables
+    //                 ============= VARIABLES =============
+    
+    
+    
     // This one adresses the HTML container by class 'chosenFood'
     var newButtonContainer = document.getElementsByClassName('chosenFood')[0];
     // This variable is used in the 'if' statement below.
@@ -16,7 +19,9 @@
 
 
 
-    // Functions
+    //                  ============= FUNCTIONS =============
+    
+    
     /** Create a new button with the value of the input field */
     function createFoodItem() 
     {
@@ -24,35 +29,39 @@
       var button = new buttonObj( buttonText , 2.30 );
 
       var newButton = document.createElement('button');
+        
       newButton.classList.add('food', 'mdl-button', 'mdl-js-button', 'mdl-button--raised');
       newButton.innerHTML = buttonText;
       newButtonContainer.appendChild(newButton);
       newButton.addEventListener('click', createClosure( button ) );
     };
 
+    //When the button is clicked this functin will execute
     function createClosure( button )
-    {
+    {  
+      //var button = new ButtonObj
       var button = button;
-
+      // if the created button is clicked this will be returned
       return function( e )
       {
         console.log( button.text );
         console.log( button.price );
-        button.addDelete( this );
+        //button.addDelete( this );
       }
     }
-
+    //Here the buttonObj is created with the given values: text and price
     function buttonObj( text , price )
     {
       this.text = text;
       this.price = price;
-      this.delete = document.createElement('i');
-      this.delete.classList.add('material-icons', 'md-8');
-      this.delete.innerHTML = "clear";
+        
+//      this.delete = document.createElement('i');
+//      this.delete.classList.add('material-icons', 'md-8');
+//      this.delete.innerHTML = "clear";
     }
 
-    buttonObj.prototype.addDelete = function( obj )
-    {
-        obj.appendChild( this.delete );
-    }
+//    buttonObj.prototype.addDelete = function( obj )
+//    {
+//        obj.appendChild( this.delete );
+//    }
 })();
