@@ -18,16 +18,15 @@
 
     //                  ============= FUNCTIONS =============
     
-    
+
     /** Create a new button with the value of the input field */
     function createFoodItem() 
     {
       var stars = document.getElementsByName('rating');
       var len = stars.length
-      var i;
       var starNumber = new Array();
 
-      for(i=0; i<len; i++) {
+      for(var i=0; i<len; i++) {
         if (stars[i].checked) {
           // console.log(stars[i].value);
           starNumber.push(stars[i].value);
