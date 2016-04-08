@@ -11,9 +11,17 @@
     // On this click-event we run the function 'createFoodItem'
     // I run the function 'createFoodItem' here, but maybe I should make a 'check' function
     // to check if there was any value typed in the input field to store in the button?
-    if (addItem) 
-    {
-      addItem.addEventListener('click', createFoodItem );
+    if (addItem){
+     addItem.addEventListener('click', required);
+    function required(){
+        var val = document.getElementsByClassName("userMovie")[0].value;
+            if(val.length == null || val.length == "" ){
+                console.log("U heeft geen film ingetoetst");
+            }else{
+              addItem.addEventListener('click', createFoodItem );
+            }
+            
+        }
     }
 
     //                  ============= FUNCTIONS =============
