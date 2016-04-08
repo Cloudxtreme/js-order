@@ -47,7 +47,7 @@
       var button = new buttonObj( buttonText , starNumber );
       var newButton = document.createElement('button');
         
-      newButton.classList.add('food', 'mdl-button', 'mdl-js-button', 'mdl-button--raised');
+      newButton.classList.add('movie', 'mdl-button', 'mdl-js-button', 'mdl-button--raised');
       newButton.innerHTML = buttonText;
       newButtonContainer.appendChild(newButton);
       newButton.addEventListener('click', createClosure( button ) );
@@ -56,14 +56,13 @@
     // When the button is clicked this functin will execute
     function createClosure( button )
     {  
-      // var button = new ButtonObj
       var button = button;
       // if the created button is clicked this will be returned
       return function( e )
       {
         console.log( button.text );
         console.log( button.rating );
-        // button.addDelete( this );
+        button.addDelete( this );
       }
     }
     // Here the buttonObj is created with the given values: text and rating
@@ -72,13 +71,13 @@
       this.text = text;
       this.rating = rating;
         
-     // this.delete = document.createElement('i');
-     // this.delete.classList.add('material-icons', 'mdl-badge', 'mdl-badge--overlap');
-     // this.delete.innerHTML = "3";
+      this.delete = document.createElement('i');
+      this.delete.classList.add('icon', 'material-icons', 'mdl-badge', 'mdl-badge--overlap');
+      this.delete.innerHTML = 'clear';
     }
 
-   // buttonObj.prototype.addDelete = function( obj )
-   // {
-   //     obj.appendChild( this.delete );
-   // }
+   buttonObj.prototype.addDelete = function( obj )
+   {
+       obj.appendChild( this.delete );
+   }
 })();
