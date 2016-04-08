@@ -1,5 +1,16 @@
 (function() {
   'use strict';
+
+    // Leerdoelen:
+    // - Ik ben bekend met de basis JavaScript syntax.
+    // - Ik ben bekend met Javascript functions and arrays.
+    // - Ik ben bekend met Javascript Objects en prototype.
+    // - Ik ben bekend met Javascript DOM manipulatie.
+    // - Ik ben bekend met Javascript Events.
+    // - Ik ben bekend met Javascript Closures.
+    // - Ik ben bekend met HTTP en JavaScript XMLhttpRequest.
+    // - Ik ben bekend met Node.js (optioneel).
+
     //                 ============= VARIABLES =============
     
 
@@ -23,10 +34,9 @@
     function createFoodItem() 
     {
       var stars = document.getElementsByName('rating');
-      var len = stars.length
       var starNumber = new Array();
 
-      for(var i=0; i<len; i++) {
+      for(var i=0; i < stars.length; i++) {
         if (stars[i].checked) {
           // console.log(stars[i].value);
           starNumber.push(stars[i].value);
