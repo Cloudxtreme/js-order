@@ -44,11 +44,6 @@
                 newValidationContainer.style.display = "block";
                 newValidationContainer.appendChild(validationText);
                 validationText.innerHTML = 'U heeft geen film ingevoerd...';
-<<<<<<< HEAD
-=======
-                // reseting the input field
-                
->>>>>>> refs/remotes/frankgraave/develop
         } 
         else if (!!validationText) {
             // var validationText = document.getElementsByClassName('validTxt')[0];
@@ -76,8 +71,6 @@
           // console.log(stars[i].value);
           starNumber.push(stars[i].value);
           console.log("checked");   
-        }else{
-            console.log("laatste else");
         }
       }
 
