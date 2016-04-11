@@ -11,6 +11,7 @@
     // - Ik ben bekend met HTTP en JavaScript XMLhttpRequest.
     // - Ik ben bekend met Node.js (optioneel).
 
+
     //                 ============= VARIABLES =============
     
 
@@ -23,20 +24,30 @@
     // I run the function 'createFoodItem' here, but maybe I should make a 'check' function
     // to check if there was any value typed in the input field to store in the button?
     if (addItem){
-     addItem.addEventListener('click', required);
-    function required(){
-        var val = document.getElementsByClassName("userMovie")[0].value;
-            if(val.length == null || val.length == "" ){
-                console.log("U heeft geen film ingetoetst");
-            }else{
-              addItem.addEventListener('click', createFoodItem );
-            }
-            
-        }
+      addItem.addEventListener( 'click', checkInput );
     }
 
+
     //                  ============= FUNCTIONS =============
-    
+
+
+    /** This function runs to check if the input field has a value */
+    function checkInput()
+    {
+      var val = document.getElementsByClassName("userMovie")[0].value;
+        if(val.length == null || val.length == "" ) {
+            console.log('U heeft geen film ingevoerd.');
+            var validationText = document.createElement('p');
+            validationText.classList.add('validTxt');
+            newButtonContainer.appendChild(validationText);
+            validationText.innerHTML = 'U heeft geen film ingevoerd...';
+        } else if (!!validationText) {
+            //var validationText = document.getElementsByClassName('validTxt')[0];
+            validationText.parentNode.removeChild('p');
+        } else {
+            addItem.addEventListener('click', createFoodItem );
+        }
+    };
 
     /** Create a new button with the value of the input field */
     function createFoodItem() 
@@ -73,7 +84,7 @@
         button.addDelete( this );
       }
     }
-    // Here the buttonObj is created with the given values: text and rating
+    // Here the buttonObj is created with the given parameters: text and rating
     function buttonObj( text , rating )
     {
       this.text = text;
@@ -84,8 +95,8 @@
       this.delete.innerHTML = 'clear';
     }
 
-   buttonObj.prototype.addDelete = function( obj )
-   {
+    buttonObj.prototype.addDelete = function( obj )
+    {
        obj.appendChild( this.delete );
-   }
+    }
 })();
