@@ -38,7 +38,6 @@
       var val = document.getElementsByClassName("userMovie")[0].value;
         if(val.length == null || val.length == "") {
             //Creating a warning message. 
-<<<<<<< HEAD
             var validationText = document.createElement('p');
                 validationText.classList.add('validTxt');
                 // User has NO input > show error container
@@ -46,25 +45,17 @@
                 newValidationContainer.style.display = "block";
                 newValidationContainer.appendChild(validationText);
                 validationText.innerHTML = 'U heeft geen film ingevoerd...';
-<<<<<<< HEAD
-=======
-                // reseting the input field
-                
->>>>>>> refs/remotes/frankgraave/develop
         } 
         else if (!!validationText) {
             // var validationText = document.getElementsByClassName('validTxt')[0];
             // validationText.parentNode.removeChild('p');
-        } 
-=======
+        
             // User has NO input > show error container
             var newValidationContainer = document.getElementsByClassName('validation')[0];
             newValidationContainer.style.display = "block";
             // reseting the input field
-
-        }
->>>>>>> refs/remotes/frankgraave/develop
-        else {
+            }
+        else{
             // User has input > delete child from error container
             createFoodItem();
         }
