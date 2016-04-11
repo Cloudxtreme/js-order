@@ -40,16 +40,21 @@
             //Creating a warning message.
             var validationText = document.createElement('p');
                 validationText.classList.add('validTxt');
+                var newValidationContainer = document.getElementsByClassName('validation')[0];
+                newValidationContainer.style.display = "block";
                 newValidationContainer.appendChild(validationText);
                 validationText.innerHTML = 'U heeft geen film ingevoerd...';
-                //reseting the input field
+                // reseting the input field
                 
         } 
         else if (!!validationText) {
-            //var validationText = document.getElementsByClassName('validTxt')[0];
-            validationText.parentNode.removeChild('p');
+            // var validationText = document.getElementsByClassName('validTxt')[0];
+            // validationText.parentNode.removeChild('p');
         } 
         else {
+            var newValidationContainer = document.getElementsByClassName('validation')[0];
+            var validationText = document.getElementsByClassName('validTxt')[0];
+            newValidationContainer.removeChild(validationText);
             createFoodItem();
         }
     };
@@ -57,6 +62,9 @@
     /** Create a new button with the value of the input field */
     function createFoodItem() 
     {
+      var newValidationContainer = document.getElementsByClassName('validation')[0];
+      newValidationContainer.style.display = "none";
+
       var stars = document.getElementsByName('rating');
       var starNumber = new Array();
 
