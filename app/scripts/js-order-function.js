@@ -40,6 +40,7 @@
             //Creating a warning message. 
             var validationText = document.createElement('p');
                 validationText.classList.add('validTxt');
+                // User has NO input > show error container
                 var newValidationContainer = document.getElementsByClassName('validation')[0];
                 newValidationContainer.style.display = "block";
                 newValidationContainer.appendChild(validationText);
@@ -55,6 +56,7 @@
             // validationText.parentNode.removeChild('p');
         } 
         else {
+            // User has input > delete child from error container
             var newValidationContainer = document.getElementsByClassName('validation')[0];
             var validationText = document.getElementsByClassName('validTxt')[0];
             newValidationContainer.removeChild(validationText);
@@ -65,6 +67,7 @@
     /** Create a new button with the value of the input field */
     function createFoodItem() 
     {
+      // User has input > hide the error container
       var newValidationContainer = document.getElementsByClassName('validation')[0];
       newValidationContainer.style.display = "none";
 
