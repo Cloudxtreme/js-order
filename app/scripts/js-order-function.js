@@ -38,25 +38,14 @@
       var val = document.getElementsByClassName("userMovie")[0].value;
         if(val.length == null || val.length == "") {
             //Creating a warning message. 
-            var validationText = document.createElement('p');
-                validationText.classList.add('validTxt');
-                // User has NO input > show error container
-                var newValidationContainer = document.getElementsByClassName('validation')[0];
-                newValidationContainer.style.display = "block";
-                newValidationContainer.appendChild(validationText);
-                validationText.innerHTML = 'U heeft geen film ingevoerd...';
-                // reseting the input field
-                
-        } 
-        else if (!!validationText) {
-            // var validationText = document.getElementsByClassName('validTxt')[0];
-            // validationText.parentNode.removeChild('p');
-        } 
+            // User has NO input > show error container
+            var newValidationContainer = document.getElementsByClassName('validation')[0];
+            newValidationContainer.style.display = "block";
+            // reseting the input field
+
+        }
         else {
             // User has input > delete child from error container
-            var newValidationContainer = document.getElementsByClassName('validation')[0];
-            var validationText = document.getElementsByClassName('validTxt')[0];
-            newValidationContainer.removeChild(validationText);
             createFoodItem();
         }
     };
