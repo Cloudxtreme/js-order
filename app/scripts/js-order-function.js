@@ -17,6 +17,7 @@
 
     // This one adresses the HTML container by class 'chosenFood'
     var newButtonContainer = document.getElementsByClassName('chosenMovie')[0];
+    var newValidationContainer = document.getElementsByClassName('validation')[0];
     // This variable is used in the 'if' statement below.
     var addItem = document.getElementsByClassName('addUserMovie')[0];
 
@@ -35,17 +36,21 @@
     function checkInput()
     {
       var val = document.getElementsByClassName("userMovie")[0].value;
-        if(val.length == null || val.length == "" ) {
-            console.log('U heeft geen film ingevoerd.');
+        if(val.length == null || val.length == "") {
+            //Creating a warning message.
             var validationText = document.createElement('p');
-            validationText.classList.add('validTxt');
-            newButtonContainer.appendChild(validationText);
-            validationText.innerHTML = 'U heeft geen film ingevoerd...';
-        } else if (!!validationText) {
+                validationText.classList.add('validTxt');
+                newValidationContainer.appendChild(validationText);
+                validationText.innerHTML = 'U heeft geen film ingevoerd...';
+                //reseting the input field
+                
+        } 
+        else if (!!validationText) {
             //var validationText = document.getElementsByClassName('validTxt')[0];
             validationText.parentNode.removeChild('p');
-        } else {
-            addItem.addEventListener('click', createFoodItem );
+        } 
+        else {
+            createFoodItem();
         }
     };
 
@@ -84,6 +89,7 @@
         button.addDelete( this );
       }
     }
+    
     // Here the buttonObj is created with the given parameters: text and rating
     function buttonObj( text , rating )
     {
