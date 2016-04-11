@@ -44,7 +44,7 @@
                 var newValidationContainer = document.getElementsByClassName('validation')[0];
                 newValidationContainer.style.display = "block";
                 newValidationContainer.appendChild(validationText);
-                validationText.innerHTML = 'U heeft geen film ingevoerd...';
+                
         } 
         else if (!!validationText) {
             // var validationText = document.getElementsByClassName('validTxt')[0];
