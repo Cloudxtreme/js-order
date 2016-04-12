@@ -38,13 +38,24 @@
       var val = document.getElementsByClassName("userMovie")[0].value;
         if(val.length == null || val.length == "") {
             //Creating a warning message. 
+            var validationText = document.createElement('p');
+                validationText.classList.add('validTxt');
+                // User has NO input > show error container
+                var newValidationContainer = document.getElementsByClassName('validation')[0];
+                newValidationContainer.style.display = "block";
+                newValidationContainer.appendChild(validationText);
+                
+        } 
+        else if (!!validationText) {
+            // var validationText = document.getElementsByClassName('validTxt')[0];
+            // validationText.parentNode.removeChild('p');
+        
             // User has NO input > show error container
             var newValidationContainer = document.getElementsByClassName('validation')[0];
             newValidationContainer.style.display = "block";
             // reseting the input field
-
-        }
-        else {
+            }
+        else{
             // User has input > delete child from error container
             createFoodItem();
         }
@@ -65,8 +76,6 @@
           // console.log(stars[i].value);
           starNumber.push(stars[i].value);
           console.log("checked");   
-        }else{
-            console.log("laatste else");
         }
       }
 
@@ -109,3 +118,4 @@
        obj.appendChild( this.delete );
     }
 })();
+
