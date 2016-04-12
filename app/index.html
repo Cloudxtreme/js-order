@@ -86,43 +86,47 @@
                 <span class="visuallyhidden">share</span>
               </div>
             </div>
+              <!--Movie list container-->
             <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
-              <h4>Individual Focus 1</h4>
-              <p>
-                Voor mijn “Individual Focus 1” zoals dat zo mooi heet, ga ik mij verdiepen in de programmeertaal JavaScript. Waarom JavaScript? Het is naar mijn mening dé basis om straks een goede webdeveloper te worden! Ik ben bezig met het lezen van het boek “Eloquent JavaScript” geschreven door Marijn Haverbeke. Dit boek is te bestellen, maar hier ook gratis online te lezen. Het boek is geschreven in het engels waardoor het enigszins wat moeilijker is om goed te begrijpen. Ondanks dat is het wel een erg goed boek tot nu toe. Ik ga mij verdiepen in de JavaScript syntax, functions en arrays, objects en prototypes, DOM manipulatie, Events, Closures, HTTP en JavaScript XMLhttpRequests.
-              </p>
-              <h4>MOVIE TIME!</h4>
-              <p>
-               Dit is een prototype van onze movie-recensie-maker. Het is de bedoeling dat de gebruiker films kan toevoegen en die een recensie kan geven. Met hierbij een rating in sterren.
-              </p>
-              <p>
-                <!-- What movie you want to add bro? -->
-                <div class="mdl-textfield mdl-js-textfield">
-                  <input class="userMovie mdl-textfield__input" type="text" id="sample1">
-                  <label class="mdl-textfield__label" for="choiceField">Welke film wil je toevoegen?</label>
-                </div>
-                <strong class="choice">Hoeveel sterren geeft u deze film?</strong>
-                <br>
-                <span class="star-rating">
-                  <input type="radio" name="rating" value="1">
-                  <input type="radio" name="rating" value="2">
-                  <input type="radio" name="rating" value="3">
-                  <input type="radio" name="rating" value="4">
-                  <input type="radio" name="rating" value="5">
-                </span>
-                <br>
-                <!-- Accent-colored raised button with ripple -->
-                <button class="addUserMovie mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                  Toevoegen
-                </button>
-                <p>Je keuze:</p>
-                <!-- Raised disabled button-->
-                <p class="validation">U heeft geen film ingevoerd...</p>
-                <p class="chosenMovie"></p>
-                <br>
-                <p class="movieList"></p>
-              </p>
+                <h4>Individual Focus 1</h4>
+                  <!--<p>
+                    Voor mijn “Individual Focus 1” zoals dat zo mooi heet, ga ik mij verdiepen in de programmeertaal JavaScript. Waarom JavaScript? Het is naar mijn mening dé basis om straks een goede webdeveloper te worden! Ik ben bezig met het lezen van het boek “Eloquent JavaScript” geschreven door Marijn Haverbeke. Dit boek is te bestellen, maar hier ook gratis online te lezen. Het boek is geschreven in het engels waardoor het enigszins wat moeilijker is om goed te begrijpen. Ondanks dat is het wel een erg goed boek tot nu toe. Ik ga mij verdiepen in de JavaScript syntax, functions en arrays, objects en prototypes, DOM manipulatie, Events, Closures, HTTP en JavaScript XMLhttpRequests.
+                  </p>-->
+                <h4>Manage your own movie list!</h4>
+                    <!-- What movie you want to add bro? -->
+                    <div class="mdl-textfield mdl-js-textfield">
+                      <input class="userMovie mdl-textfield__input" type="text" id="sample1">
+                      <label class="mdl-textfield__label" for="choiceField">Welke film wil je toevoegen?</label>
+                    </div>
+                    <strong class="choice">Hoeveel sterren geeft u deze film?</strong>
+                    <br>
+                    <span class="star-rating">
+                      <input type="radio" name="rating" value="1">
+                      <input type="radio" name="rating" value="2">
+                      <input type="radio" name="rating" value="3">
+                      <input type="radio" name="rating" value="4">
+                      <input type="radio" name="rating" value="5">
+                    </span>
+                    <br>
+                    <!-- Accent-colored raised button with ripple -->
+                    <button class="addUserMovie mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                      Toevoegen
+                    </button>
+                    <p>Je keuze:</p>
+                    <!-- Raised disabled button-->
+                    <p class="validation">U heeft geen film ingevoerd...</p>
+                    <br>
+                    <p class="movieList"></p>
+                  </p>
             </div>
+            <div class="movieContainer">
+                <div class="movieListTest">
+                <p class="chosenMovie"></p>
+                </div>
+                <div class="movieInfo">
+                </div>
+            </div>
+            
           </div>
         </div>
         <footer class="mdl-mini-footer">
