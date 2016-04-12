@@ -118,3 +118,4 @@
        obj.appendChild( this.delete );
     }
 })();
+
