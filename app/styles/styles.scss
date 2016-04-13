@@ -16,6 +16,12 @@
             .icon{
                 left: -7px;
             }
+            button:hover{
+                .icon{
+                    display: block !important;
+                    left: 20px;
+                }
+            }
         }
     }
     .movieInfo {
@@ -23,6 +29,9 @@
       min-height: 500px;
       float: right;
       background-color: whitesmoke;
+        h1{
+            text-align: center;
+        }
     }
 }
 
