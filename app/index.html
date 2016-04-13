@@ -48,6 +48,7 @@
     <!-- Material Design Lite Stuff -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.grey-orange.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 
     <!-- Custom style includes -->
@@ -85,30 +86,47 @@
                 <span class="visuallyhidden">share</span>
               </div>
             </div>
+              <!--Movie list container-->
             <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
-              <h4>Individual Focus 1</h4>
-              <p>
-                Voor mijn “Individual Focus 1” zoals dat zo mooi heet, ga ik mij verdiepen in de programmeertaal JavaScript. Waarom JavaScript? Het is naar mijn mening dé basis om straks een goede webdeveloper te worden! Ik ben bezig met het lezen van het boek “Eloquent JavaScript” geschreven door Marijn Haverbeke. Dit boek is te bestellen, maar hier ook gratis online te lezen. Het boek is geschreven in het engels waardoor het enigszins wat moeilijker is om goed te begrijpen. Ondanks dat is het wel een erg goed boek tot nu toe. Ik ga mij verdiepen in de JavaScript syntax, functions en arrays, objects en prototypes, DOM manipulatie, Events, Closures, HTTP en JavaScript XMLhttpRequests.
-              </p>
-              <h4>Pizzatime!</h4>
-              <p>
-                Voor deze IF ga ik een soort bestel service ontwikkelen in JavaScript. Hiervoor gebruik ik o.a. Closures en EventListeners. Meer informatie volgt...
-              </p>
-              <p>
-                <!-- What pizza you want bro? -->
-                <div class="mdl-textfield mdl-js-textfield">
-                  <input class="userChoice mdl-textfield__input" type="text" id="sample1">
-                  <label class="mdl-textfield__label" for="choiceField">Wat voor ingrediënten wil je op je Pizza?</label>
-                </div>
-                <!-- Accent-colored raised button with ripple -->
-                <button class="addUserChoice mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                  Toevoegen
-                </button><br>
-                <p>Je keuze:</p>
-                <!-- Raised disabled button-->
-                <p class="chosenFood"></p>
-              </p>
+                <h4>Individual Focus 1</h4>
+                  <!--<p>
+                    Voor mijn “Individual Focus 1” zoals dat zo mooi heet, ga ik mij verdiepen in de programmeertaal JavaScript. Waarom JavaScript? Het is naar mijn mening dé basis om straks een goede webdeveloper te worden! Ik ben bezig met het lezen van het boek “Eloquent JavaScript” geschreven door Marijn Haverbeke. Dit boek is te bestellen, maar hier ook gratis online te lezen. Het boek is geschreven in het engels waardoor het enigszins wat moeilijker is om goed te begrijpen. Ondanks dat is het wel een erg goed boek tot nu toe. Ik ga mij verdiepen in de JavaScript syntax, functions en arrays, objects en prototypes, DOM manipulatie, Events, Closures, HTTP en JavaScript XMLhttpRequests.
+                  </p>-->
+                <h4>Manage your own movie list!</h4>
+                    <!-- What movie you want to add bro? -->
+                    <div class="mdl-textfield mdl-js-textfield">
+                      <input class="userMovie mdl-textfield__input" type="text" id="sample1">
+                      <label class="mdl-textfield__label" for="choiceField">Welke film wil je toevoegen?</label>
+                    </div>
+                    <strong class="choice">Hoeveel sterren geeft u deze film?</strong>
+                    <br>
+                    <span class="star-rating">
+                      <input type="radio" name="rating" value="1">
+                      <input type="radio" name="rating" value="2">
+                      <input type="radio" name="rating" value="3">
+                      <input type="radio" name="rating" value="4">
+                      <input type="radio" name="rating" value="5">
+                    </span>
+                    <br>
+                    <!-- Accent-colored raised button with ripple -->
+                    <button class="addUserMovie mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                      Toevoegen
+                    </button>
+                    <!-- Raised disabled button-->
+                    <p class="validation">U heeft geen film ingevoerd...</p>
+                    <br>
+                    <p class="movieList"></p>
+                  </p>
             </div>
+            <div class="movieContainer">
+                <div class="movieListTest">
+                <p class="chosenMovie"></p>
+                </div>
+                <div class="movieInfo">
+                    <h1 class="title"></h1>
+                </div>
+            </div>
+            
           </div>
         </div>
         <footer class="mdl-mini-footer">
@@ -124,10 +142,10 @@
             </button>
           </div>
           <div class="mdl-mini-footer--right-section">
-            <button class="mdl-mini-footer--social-btn social-btn__share">
+            <!-- <button class="mdl-mini-footer--social-btn social-btn__share">
               <i class="material-icons" role="presentation">share</i>
               <span class="visuallyhidden">share</span>
-            </button>
+            </button> -->
           </div>
         </footer>
       </main>

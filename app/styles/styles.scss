@@ -1,0 +1,39 @@
+@import 'mainSass';
+
+
+.movieContainer {
+  width: 100%;
+  min-height: 500px;
+    .movieListTest {
+        width: 20%;
+        min-height: 500px;
+        float: left;
+        background-color: #333;
+        .movie{
+            min-width: 90% !important;
+            max-width: 90% !important;
+            background-color: white;
+            .icon{
+                left: -7px;
+            }
+            button:hover{
+                .icon{
+                    display: block !important;
+                    left: 20px;
+                }
+            }
+        }
+    }
+    .movieInfo {
+      width: 80%;
+      min-height: 500px;
+      float: right;
+      background-color: whitesmoke;
+        h1{
+            text-align: center;
+        }
+    }
+}
+
+
+
