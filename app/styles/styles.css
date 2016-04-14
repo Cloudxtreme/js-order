@@ -504,7 +504,7 @@ body .demo-blog {
 
 
 .demo-blog--blogpost .meta + .mdl-card__supporting-text p.validation {
-  margin-top: 0px;
+  margin-top: 16px;
   color: white;
   background-color: #FE6464;
   -webkit-border-radius: 4px;
