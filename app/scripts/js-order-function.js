@@ -1,6 +1,7 @@
 (function() {
   'use strict';
 
+    console.log("Script loaded."); 
     // Leerdoelen:
     // - Ik ben bekend met de basis JavaScript syntax.
     // - Ik ben bekend met Javascript functions and arrays.
@@ -40,6 +41,7 @@
             //Creating a warning message. 
             var newValidationContainer = document.getElementsByClassName('validation')[0];
             newValidationContainer.style.display = "block";
+            console.log("Warning message created!"); 
         }
         else {
             // User has input > delete child from error container
@@ -59,9 +61,7 @@
 
       for(var i=0; i < stars.length; i++) {
         if (stars[i].checked) {
-          // console.log(stars[i].value);
           starNumber.push(stars[i].value);
-          console.log("checked");   
         } 
       }
 
@@ -73,6 +73,8 @@
       newButton.innerHTML = buttonText;
       newButtonContainer.appendChild(newButton);
       newButton.addEventListener('click', createClosure( button ) );
+
+      console.log("New button created!"); 
     };
 
     // When the button is clicked this function will execute
@@ -82,6 +84,7 @@
       // if the created button is clicked this will be returned
       return function( e )
       {
+        console.log( button.text );
         console.log( button.rating );
         button.addDelete( this );
           
