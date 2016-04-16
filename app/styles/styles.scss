@@ -11,15 +11,15 @@
         min-height: 500px;
         float: left;
         background-color: #333;
-        .movie{
+        .movie {
             min-width: 90% !important;
             max-width: 90% !important;
             background-color: white;
             .icon{
                 left: -7px;
             }
-            button:hover{
-                .icon{
+            button:hover {
+                .icon {
                     display: block !important;
                     left: 20px;
                 }
@@ -27,27 +27,34 @@
         }
     }
     .movieInfo {
-      width: 78%;
-      min-height:500px;
-      display: block;
-      float: right;
-        h1{
-          font-size: 28px;
-          line-height: 50px;
-          display: block;
-          width: 94.2%;
-          height: 50px;
-          float: left;
-          clear: both;
-          overflow: hidden;
-          padding: 10px 0 10px 20px;
-          margin: 15px 10px 0 10px;
-          background-color: gray;
-          -webkit-border-radius: 5px;
-          -moz-border-radius: 5px;
-          border-radius: 5px;
-          font-family: 'Helvetica Neue';
-          font-weight: 200;
+        width: 78%;
+        min-height:500px;
+        display: block;
+        float: right;
+        h1, .ratingInfo {
+            font-size: 28px;
+            line-height: 50px;
+            display: block;
+            width: 94.2%;
+            height: 50px;
+            float: left;
+            clear: both;
+            overflow: hidden;
+            padding: 10px 0 10px 20px;
+            margin: 15px 10px 0 10px;
+            background-color: gray;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            font-family: 'Helvetica Neue';
+            font-weight: 200;
+        }
+        .ratingInfo {
+            background-color: #aeaeae;
+            margin-top: 0;
+            font-size: 18px;
+            height: 20px;
+            line-height: 20px;
         }
     }
 }
@@ -86,7 +93,7 @@
   background-color: teal;
   margin: 10px;
   float: left;
-  background-size: contain;
+  background-size: cover;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
