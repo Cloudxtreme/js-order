@@ -95,6 +95,7 @@
         var input = button.text,
             movieName = encodeURI(input);
 
+        console.log('Requesting movie data for: ' + button.text);
         $('.loading').show();
         $('.ladenTxt').show();
         $('.loading').html('<img src="images/294.gif">');
@@ -124,9 +125,10 @@
                 // print string
                 // console.log(s);
               }
+                console.log('Succesfully loaded movie data!')
                 $('.loading').hide();
                 $('.ladenTxt').hide();
-            }, 2000);
+            }, 3000);
           }
         });
       });
