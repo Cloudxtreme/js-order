@@ -18,7 +18,7 @@
   var addItem = document.getElementsByClassName('addUserMovie')[0];
 
   // Initially hiding our loading animation.
-  $('.ladenTxt').hide();
+  $('.loadingDiv').hide();
 
   if (addItem) {
     addItem.addEventListener('click', checkInput);
@@ -106,9 +106,8 @@
             movieName = encodeURI(input);
 
         console.log('Requesting movie data for: ' + button.text);
-        $('.movieInfo').hide();
-        $('.loading').show();
-        $('.ladenTxt').show();
+        $('.movieInfo').fadeOut( 750 );
+        $('.loadingDiv').fadeIn( 300 );
         $('.loading').html('<img src="images/294.gif">');
 
         $.ajax({
@@ -129,7 +128,7 @@
                 //   // voeg id toe aan een string
                 //   s += data.results[i].genre_ids[i2] + ', ';
                 // }
-                $('.movieInfo').show();
+                $('.movieInfo').fadeIn( 750 );
                 $('.poster').css("background-image", "url(http://image.tmdb.org/t/p/w500/" + data.results[0].poster_path);
                 $('.movieTitle').html(data.results[0].original_title);
                 $('.movieDescription').html(data.results[0].overview);
@@ -137,8 +136,7 @@
                 $('.ratingInfo').html('Your rating: ' + button.rating + '&nbsp;&nbsp;-&nbsp;&nbsp;' + 'IMDB Rating: ' + data.results[0].vote_average);
               }
                 console.log('Succesfully loaded movie data!')
-                $('.loading').hide();
-                $('.ladenTxt').hide();
+                $('.loadingDiv').fadeOut( 300 );
             }, 2500);
           }
         });
